@@ -76,7 +76,7 @@ h1 {
 /* section2 */
 .section2 {
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 10rem 0 10rem 0;
     background: #45567d;
     width: 100%;
 }
@@ -92,43 +92,53 @@ h2 {
     text-align: center;
 }
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 4rem;
-    width: 100%; 
-    max-width: 1280px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
     margin-bottom: 6rem;
 }
+
+.card {
+    flex: 1 1 calc(33.33% - 2rem); 
+    margin: 1rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
 .section {
     background: #303841;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make sure the section takes up the full height of the card */
 }
+
+.section-card {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+    flex: 1; /* Allow this element to take up remaining vertical space */
+}
+
 a {
     text-decoration: none;
     color: #f0f0f0;
 }
+
 .section2-image {
     height: calc(100% - 6.8rem);
     width: 100%;
     object-fit: cover;
 }
 
-img {
-    display: block;
-   
-}
-.section-card {
-    font-size: 2rem;
-    padding: 2rem 0.5rem;
-}
 .code {
     color: #303841;
     transition: #303841 0.3s purple ease-out;
 }
 .btn-show-all {
-    font-size: 2rem;
+    font-size: 3rem;
     background: #303841;
     transition: #303841 0.3s ease-out;
 }
