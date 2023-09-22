@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -92,15 +95,13 @@ h2 {
     text-align: center;
 }
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     margin-bottom: 6rem;
 }
 
 .card {
-    flex: 1 1 calc(33.33% - 2rem); 
     margin: 1rem;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -134,8 +135,11 @@ a {
 }
 
 .code {
-    color: #303841;
-    transition: #303841 0.3s purple ease-out;
+   display: none;
+}
+.card:hover .code{
+    display: inline;
+    color:darkorange;
 }
 .btn-show-all {
     font-size: 3rem;
@@ -185,6 +189,9 @@ a {
     padding: 1rem 2rem;
     border-radius: 2px;
 }
+.contact-details:hover {
+    transform: translateY(25px);
+}
 .fa-facebook-square:before {
     content: "\f082";
 }
@@ -207,6 +214,7 @@ a {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1;
+    padding-right: 12px;
 }
 
 /* footer */
