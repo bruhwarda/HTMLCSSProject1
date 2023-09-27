@@ -6,11 +6,12 @@ slides.forEach((slide, index) => {
 });
 
 const goPrev = () => {
-  counter--;
+  counter === 0 ? (counter = slides.length - 1) : counter--;
+
   slideCards();
 };
 const goNext = () => {
-  counter++;
+  counter === slides.length - 1 ? (counter = 0) : counter++;
   slideCards();
 };
 
